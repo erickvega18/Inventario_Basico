@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: #f0f4f8;
+  color: #1e2a3a;
+  min-height: 100vh;
+}
+
+header {
+  background: #1e2a3a;
+  color: #fff;
+  padding: 1.2rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+header h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+main {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ── TARJETAS ── */
+section {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 1.6rem 2rem;
+  border: 1px solid #dde3ec;
+}
+
+section h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1e2a3a;
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.7rem;
+  border-bottom: 2px solid #eef1f6;
+}
+
+/* ── GRID DEL FORMULARIO ── */
+.form-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.campo label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #6b7a99;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.campo input {
+  padding: 0.65rem 0.9rem;
+  border: 1.5px solid #dde3ec;
+  border-radius: 8px;
+  font-size: 0.97rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: #f8fafc;
+  color: #1e2a3a;
+  transition: border-color 0.2s, background 0.2s;
+  width: 100%;
+}
+
+.campo input:focus {
+  outline: none;
+  border-color: #4a6cf7;
+  background: #fff;
+}
+
+.campo input::placeholder {
+  color: #aab4c8;
+}
+
+/* ── FILA DE BOTONES ── */
+.form-btns {
+  display: flex;
+  gap: 0.7rem;
+}
+
+/* ── BOTONES ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.65rem 1.3rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.93rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.btn-guardar {
+  background: #1e2a3a;
+  color: #fff;
+}
+.btn-guardar:hover {
+  background: #2d3f58;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(30,42,58,0.25);
+}
+
+.btn-limpiar {
+  background: #eef1f6;
+  color: #4a5568;
+}
+.btn-limpiar:hover {
+  background: #dde3ec;
+}
+
+.btn-sm {
+  padding: 0.38rem 0.8rem;
+  font-size: 0.82rem;
+  border-radius: 6px;
+  border: none;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btn-editar {
+  background: #e8f0fe;
+  color: #1a56db;
+}
+.btn-editar:hover { background: #c7d9fc; }
+
+.btn-eliminar {
+  background: #fde8e8;
+  color: #c81e1e;
+}
+.btn-eliminar:hover { background: #fbd0d0; }
+
+/* ── BUSCADOR ── */
+#seccion-busqueda {
+  padding: 1rem 1.5rem;
+}
+
+.buscador-wrap {
+  position: relative;
+}
+
+.buscador-wrap svg {
+  position: absolute;
+  left: 0.85rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #8a97b0;
+}
+
+#buscador {
+  width: 100%;
+  padding: 0.68rem 1rem 0.68rem 2.5rem;
+  border: 1.5px solid #dde3ec;
+  border-radius: 9px;
+  font-size: 0.97rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: #f8fafc;
+  color: #1e2a3a;
+  transition: border-color 0.2s;
+}
+
+#buscador:focus {
+  outline: none;
+  border-color: #4a6cf7;
+  background: #fff;
+}
+
+#buscador::placeholder { color: #aab4c8; }
+
+/* ── TABLA ── */
+#tablaInventario {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#tablaInventario thead tr {
+  background: #1e2a3a;
+  color: #fff;
+}
+
+#tablaInventario th {
+  padding: 0.8rem 1rem;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  font-weight: 600;
+  text-align: center;
+}
+
+#tablaInventario th:first-child { border-radius: 8px 0 0 0; }
+#tablaInventario th:last-child  { border-radius: 0 8px 0 0; }
+
+#tablaInventario td {
+  padding: 0.75rem 1rem;
+  text-align: center;
+  font-size: 0.95rem;
+  border-bottom: 1px solid #eef1f6;
+  color: #2d3748;
+}
+
+#tablaInventario tbody tr:last-child td { border-bottom: none; }
+#tablaInventario tbody tr:hover { background: #f8fafc; }
+
+.td-acciones {
+  display: flex;
+  gap: 0.4rem;
+  justify-content: center;
+}
+
+/* ── TOTAL ── */
+#totalGeneral {
+  margin-top: 1.2rem;
+  text-align: right;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1e2a3a;
+  background: #f0f4f8;
+  padding: 0.65rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #dde3ec;
+}
+
+/* ── SIN DATOS ── */
+.vacio {
+  text-align: center;
+  color: #aab4c8;
+  padding: 2.5rem 0;
+  font-size: 0.95rem;
+}
