@@ -15,7 +15,7 @@ function guardarProducto() {
     // FUNCIÓN: AGREGAR PRODUCTO
     productos.push({ nombre, cantidad, precio });
   } else {
-    // ACTUALIZAR
+    // FUNCIÓN: ACTUALIZAR STOCK
     productos[index] = { nombre, cantidad, precio };
   }
 
