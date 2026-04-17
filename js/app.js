@@ -23,7 +23,7 @@ function guardarProducto() {
   limpiarFormulario();
   renderTabla();
 }
-
+// FUNCIÓN: ELIMINAR PRODUCTO
 function eliminarProducto(i) {
   if (confirm(`¿Eliminar "${productos[i].nombre}"?`)) {
     productos.splice(i, 1);
