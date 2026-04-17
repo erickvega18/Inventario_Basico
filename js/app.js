@@ -12,7 +12,7 @@ function guardarProducto() {
   }
 
   if (index === -1) {
-    // AGREGAR
+    // FUNCIÓN: AGREGAR PRODUCTO
     productos.push({ nombre, cantidad, precio });
   } else {
     // ACTUALIZAR
