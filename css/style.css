@@ -256,3 +256,143 @@ section h2 {
   padding: 2.5rem 0;
   font-size: 0.95rem;
 }
+/* ── PESTAÑAS ── */
+.tabs {
+  background: #16212e;
+  display: flex;
+  gap: 0.3rem;
+  padding: 0.6rem 2rem;
+}
+
+.tab-btn {
+  background: transparent;
+  color: #a0aec0;
+  border: none;
+  border-radius: 8px 8px 0 0;
+  padding: 0.6rem 1.4rem;
+  font-size: 0.95rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tab-btn:hover {
+  color: #fff;
+  background: rgba(255,255,255,0.08);
+  transform: none;
+  box-shadow: none;
+}
+
+.tab-btn.active {
+  background: #f0f4f8;
+  color: #1e2a3a;
+}
+
+/* ── CATÁLOGO GRID ── */
+.catalogo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.producto-card {
+  background: #f8fafc;
+  border: 1.5px solid #dde3ec;
+  border-radius: 12px;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.producto-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+.producto-card .prod-nombre {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #1e2a3a;
+}
+
+.producto-card .prod-precio {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1a56db;
+}
+
+.producto-card .prod-stock {
+  font-size: 0.8rem;
+  color: #6b7a99;
+}
+
+.prod-stock.agotado {
+  color: #c81e1e;
+  font-weight: 600;
+}
+
+.prod-cantidad-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.3rem;
+}
+
+.prod-cantidad-wrap input {
+  width: 55px;
+  padding: 0.35rem 0.5rem;
+  border: 1.5px solid #dde3ec;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  text-align: center;
+}
+
+.btn-agregar-carrito {
+  flex: 1;
+  background: #1e2a3a;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  padding: 0.45rem 0.7rem;
+  font-size: 0.85rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-agregar-carrito:hover { background: #2d3f58; }
+.btn-agregar-carrito:disabled {
+  background: #e2e8f0;
+  color: #a0aec0;
+  cursor: not-allowed;
+}
+
+/* ── CARRITO ── */
+#totalCarrito {
+  margin-top: 1rem;
+  text-align: right;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1e2a3a;
+  background: #f0f4f8;
+  padding: 0.65rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #dde3ec;
+}
+
+/* ── BADGE STOCK BAJO ── */
+.badge-bajo {
+  display: inline-block;
+  background: #fde8e8;
+  color: #c81e1e;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: 20px;
+}
