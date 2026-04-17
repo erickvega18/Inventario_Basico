@@ -45,6 +45,7 @@ function limpiarFormulario() {
   document.getElementById('precio').value   = '';
   document.getElementById('productoIndex').value = -1;
 }
+// FUNCIÓN: FILTRO Y BUSQUEDA
 
 function filtrarProductos() {
   const texto = document.getElementById('buscador').value.toLowerCase();
